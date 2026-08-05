@@ -1,0 +1,25 @@
+[workspace]
+channels = ["conda-forge"]
+name = "private-docker-image"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+start-jupyter = "jupyterhub-singleuser"
+
+[dependencies]
+python = "3.14.*"
+jupyterlab = ">=4.6.2,<5"
+jupyterhub = ">=5.5.0,<6"
+jupyter-resource-usage = ">=1.2.1,<2"
+jupyterlab_code_formatter = ">=3.0.3,<4"
+jupyter-sshd-proxy = "*"
+
+[pypi-dependencies]
+marimo-jupyter-extension = ">=0.3.0, <0.4"
+
+[tool.pixitainer]
+
+[tool.pixitainer.docker]
+output = "jupyterhub-marimo:latest"
+user = "jovyan"
