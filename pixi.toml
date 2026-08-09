@@ -22,6 +22,8 @@ gh-scoped-creds = ">=4.1,<5"
 marimo-jupyter-extension = ">=0.3.0, <0.4"
 
 [tool.pixitainer]
+add-file = ["setup-script.sh:/opt/conf/setup-script.sh"]
+post-command = ["bash /opt/conf/setup-script.sh"]
 
 [tool.pixitainer.docker]
 output = "ghcr.io/keewis/jupyterhub-marimo:latest"
