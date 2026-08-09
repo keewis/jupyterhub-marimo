@@ -26,3 +26,4 @@ marimo-jupyter-extension = ">=0.3.0, <0.4"
 [tool.pixitainer.docker]
 output = "ghcr.io/keewis/jupyterhub-marimo:latest"
 user = "jovyan"
+workdir = "/home/jovyan"
